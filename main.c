@@ -25,7 +25,7 @@ int main(void) {
     gpio_set(GPIOA, GPIO0 | GPIO1);
 
     rcc_periph_clock_enable(RCC_TIM2);
-    rcc_periph_reset_pulse(RST_TIM2); // Замена timer_reset на корректную функцию libopencm3
+    rcc_periph_reset_pulse(RST_TIM2);
     timer_set_mode(TIM2, TIM_CR1_CKD_CK_INT, TIM_CR1_CMS_EDGE, TIM_CR1_DIR_UP);
     timer_set_prescaler(TIM2, 719);
     timer_disable_preload(TIM2);
